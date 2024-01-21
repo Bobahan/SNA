@@ -1,1 +1,0 @@
-(()=>{"use strict";var o=function(o,l){return o+l};console.log(o(10,10)),console.log(o(2,1)),console.log("hello world!"),console.log(146),document.body.innerHTML="<div>".concat(146,"</div>")})();
