@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkulbidev=self.webpackChunkulbidev||[]).push([[685],{685:(e,u,r)=>{r.r(u),r.d(u,{default:()=>n});var s=r(893),t=r(655);const n=function(){return(0,s.jsxs)("div",{children:[(0,s.jsx)("h1",{children:"About Page"}),(0,s.jsx)(t.rU,{to:"/about",children:"About"}),(0,s.jsx)(t.rU,{to:"/",children:"App"})]})}}}]);

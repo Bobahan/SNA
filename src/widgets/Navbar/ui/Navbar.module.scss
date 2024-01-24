@@ -1,0 +1,17 @@
+.navbar {
+  background-color: rgb(32, 32, 155);
+  width: 100%;
+  height: var(--navbar-heigth);
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.links {
+  margin-left: auto;
+}
+
+.mainLink {
+  margin-right: 15px;
+  color: red;
+}

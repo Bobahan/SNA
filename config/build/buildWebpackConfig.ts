@@ -31,6 +31,6 @@ export const buildWebpackConfig = ({
       rules: buildLoaders(isDev),
     },
 
-    resolve: buildResolvers(),
+    resolve: buildResolvers({ paths }),
   };
 };

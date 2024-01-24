@@ -11,12 +11,12 @@ export const buildLoaders = (isDev: boolean): webpack.RuleSetRule[] => {
   const cssLoader = {
     test: /\.s[ac]ss$/i,
     use: [
-      MiniCssExtractPlugin.loader,
+      isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
       {
         loader: 'css-loader',
         options: {
           modules: {
-            localIdentName: isDev ? '[path][name]__[local]--[hash:base64:8]' : '[hash:base64:8]',
+            auto: true,
           },
         },
       },
