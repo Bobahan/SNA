@@ -1,7 +1,7 @@
 .navbar {
-  background-color: rgb(32, 32, 155);
+  background: var(--inverted-bg-color);
   width: 100%;
-  height: var(--navbar-heigth);
+  // height: var(--navbar-heigth);
   display: flex;
   align-items: center;
   padding: 20px;

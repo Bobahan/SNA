@@ -10,14 +10,9 @@
     "esModuleInterop": true,
     "sourceMap": true,
     "moduleResolution": "node",
-    "baseUrl": "./",
+    "baseUrl": "src",
     "paths": {
-      "@app/*": ["src/app/*"],
-      "@pages/*": ["src/pages/*"],
-      "@widgets/*": ["src/widgets/*"],
-      "@feature/*": ["src/feature/*"],
-      "@entities/*": ["src/entities/*"],
-      "@shared/*": ["src/shared/*"]
+      "@/*": ["*"]
     }
   },
 

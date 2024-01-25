@@ -1,14 +1,14 @@
+import { useTheme } from '@/shared/libs/useTheme';
 import { AppRouter } from './providers/router';
 import { Navbar } from '../widgets/Navbar';
-import { useTheme } from '../shared/libs/useTheme';
+import { cn } from '../shared/libs/cn';
 import './styles/index.scss';
 
 export const App = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
 
   return (
-    <div className={`app ${theme}`}>
-      <button onClick={toggleTheme}>Toggle</button>
+    <div className={cn('app', {}, [theme])}>
       <Navbar />
       <AppRouter />
     </div>

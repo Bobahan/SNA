@@ -1,11 +1,15 @@
 import webpack from 'webpack';
+import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
 import { BuildPaths } from './types/config';
-import path from 'path';
 
-export const buildResolvers = ({ paths }: { paths: BuildPaths }): webpack.ResolveOptions => {
+export const buildResolvers = ({ tsConfig }: any): webpack.ResolveOptions => {
   return {
     extensions: ['.tsx', '.ts', '.js'],
     preferAbsolute: true,
-    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+    plugins: [
+      new TsconfigPathsPlugin({
+        configFile: tsConfig,
+      }),
+    ],
   };
 };
