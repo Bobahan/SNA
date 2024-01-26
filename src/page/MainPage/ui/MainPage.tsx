@@ -1,3 +1,3 @@
 export const MainPage = () => {
-  return <div>Main Page</div>;
+  return <div className="page-wrapper">Main Page</div>;
 };

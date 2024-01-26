@@ -25,7 +25,7 @@ export const buildWebpackConfig = ({
       clean: true,
     },
 
-    plugins: builldPlugins(paths.html),
+    plugins: builldPlugins(paths.html, isDev),
 
     module: {
       rules: buildLoaders(isDev),
