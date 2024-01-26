@@ -1,11 +1,12 @@
 import AppLink, { AppLinkTheme } from '@/shared/UIKit/AppLink/AppLink';
 import cls from './Navbar.module.scss';
+import React from 'react';
 
 interface NavbarProps {
   className?: string;
 }
 
-export const Navbar = ({ className }: NavbarProps) => {
+export const Navbar: React.FC<NavbarProps> = () => {
   return (
     <div className={cls.navbar}>
       <div className={cls.links}>

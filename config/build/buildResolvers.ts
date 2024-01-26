@@ -1,8 +1,7 @@
 import webpack from 'webpack';
 import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
-import { BuildPaths } from './types/config';
 
-export const buildResolvers = ({ tsConfig }: any): webpack.ResolveOptions => {
+export const buildResolvers = (tsConfig: string): webpack.ResolveOptions => {
   return {
     extensions: ['.tsx', '.ts', '.js'],
     preferAbsolute: true,
