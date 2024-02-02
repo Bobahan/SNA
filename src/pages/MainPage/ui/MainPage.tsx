@@ -1,6 +1,6 @@
 const MainPage = () => {
   return (
-    <div>
+    <div className="page-wrapper">
       <h1>Main Page</h1>
     </div>
   );
