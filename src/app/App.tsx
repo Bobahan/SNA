@@ -1,23 +1,14 @@
-import { Suspense } from 'react';
-import { useTheme } from '@/shared/libs/useTheme';
-import { AppRouter } from './providers/router';
-import { Navbar } from '../widgets/Navbar';
-import { cn } from '../shared/libs/cn';
-import { Sidebar } from '@/widgets/Navbar/Sidebar';
+import { useTooggleTheme } from '@/shared/libs/useToogleTheme/useTooggleTheme';
+import { classNames } from '@/shared/libs/classNames/classNames';
 import './styles/index.scss';
 
 export const App = () => {
-  const { theme } = useTheme();
+  const [theme, toggleTheme] = useTooggleTheme();
 
   return (
-    <div className={cn('app', {}, [theme])}>
-      <Suspense fallback="loading...">
-        <Navbar />
-        <div className="content-page">
-          <Sidebar />
-          <AppRouter />
-        </div>
-      </Suspense>
+    <div className={classNames('app', {}, [theme])}>
+      <h1>Hello World!</h1>
+      <button onClick={toggleTheme}>Change Theme</button>
     </div>
   );
 };
