@@ -1,0 +1,16 @@
+.navbar {
+  width: 100%;
+  background: var(--inverted-bg-color);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.links {
+  a {
+    &:first-child {
+      margin-right: 10px;
+    }
+  }
+}
