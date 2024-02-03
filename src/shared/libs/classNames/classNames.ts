@@ -1,6 +1,6 @@
 type Mods = Record<string, boolean | string>;
 
-export const classNames = (rootClass: string, mods?: Mods, additional?: Array<string>): string => {
+export const classNames = (rootClass: string, mods?: Mods, additional?: Array<string> ): string => {
   return [
     rootClass,
     ...additional.filter(Boolean),

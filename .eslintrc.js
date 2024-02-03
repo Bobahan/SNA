@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true
   },
   extends: [
     'eslint:recommended',
@@ -30,9 +31,12 @@ module.exports = {
     'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
-    'react/react-in-jsx-scope': 'off', 
+    'react/jsx-indent': [2, 2, {indentLogicalExpressions: true}],
+    'react/react-in-jsx-scope': 'off',
     'no-unused-vars': 'warn',
     '@typescript-eslint/no-unused-vars': 'warn',
-    'react/jsx-props-no-spreading': 'warn'
-  }
+    'react/jsx-props-no-spreading': 'warn',
+    'no-console': 'error',
+  },
+
 };
