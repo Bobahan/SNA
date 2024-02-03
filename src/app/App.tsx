@@ -5,6 +5,7 @@ import { AppRouter } from './provider/router';
 import { Navbar } from '@/widgets/Navbar';
 import { Sidebar } from '@/widgets/Sidebar';
 import './styles/index.scss';
+import { PageLoader } from '@/shared/UIKit/PageLoader';
 
 export const App = () => {
   const [theme] = useTooggleTheme();
@@ -12,7 +13,7 @@ export const App = () => {
 
   return (
     <div className={classNames('app', {}, [theme])}>
-      <Suspense fallback={<div>loading...</div>}>
+      <Suspense fallback={<PageLoader />}>
         <Navbar />
         <div className="content-page">
           <Sidebar />
