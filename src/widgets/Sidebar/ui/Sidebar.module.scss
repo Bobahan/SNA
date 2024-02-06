@@ -5,13 +5,10 @@
   padding: 20px;
   position: relative;
   transition: width 0.4s linear;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .collapsed {
-  width: 100px;
+  width: 200px;
 }
 
 .switcher {
@@ -19,4 +16,15 @@
   bottom: 20px;
   display: flex;
   justify-content: center;
+}
+
+.pages {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  position: absolute;
+  bottom: 20px;
+  right: -10%;
 }

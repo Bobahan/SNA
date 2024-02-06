@@ -13,12 +13,12 @@
     "baseUrl": "src",
     "paths": {
       "@/*": ["*"]
-    }
+    },
   },
 
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
     }
-  }
+  },
 }

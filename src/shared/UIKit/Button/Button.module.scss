@@ -10,3 +10,22 @@
   background: none;
   outline: none;
 }
+
+.outlined {
+  border: 1px solid var(--primary-color);
+  padding: 10px;
+}
+
+.clear_inverted {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: none;
+  outline: none;
+  color: var(--inverted-primary-color);
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

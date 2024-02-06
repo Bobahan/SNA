@@ -42,6 +42,8 @@ const config: Config = {
     'node'
   ],
 
+  setupFilesAfterEnv: ['<rootDir>config/jest/jest-setup.ts'],
+
   // The root directory that Jest should scan for tests and modules within
   rootDir: '../../',
 
