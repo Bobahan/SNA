@@ -1,8 +1,9 @@
 import { Modal } from '@/shared/UIKit/Modal/Modal';
 import { classNames } from '@/shared/libs/classNames/classNames';
-import React from 'react';
+import React, { Suspense } from 'react';
 import cls from './LoginModal.module.scss';
-import { LoginForm } from '../LoginForm/LoginForm';
+import { LoginFormLazy } from '../LoginForm/LoginFormLazy';
+import { Loader } from '@/shared/UIKit/PageLoader/ui/Loader';
 
 interface LoginModalProps {
     className?: string
@@ -10,10 +11,14 @@ interface LoginModalProps {
     onClose: () => void
 }
 
-export const LoginModal: React.FC<LoginModalProps> = ({isOpen, onClose}) => {
+const LoginModal: React.FC<LoginModalProps> = ({isOpen, onClose}) => {
   return (
     <Modal lazy isOpen={isOpen} onClose={onClose} className={classNames(cls.LoginModal, {}, [])}>
-      <LoginForm />
+      <Suspense fallback={<Loader />}>
+        <LoginFormLazy />
+      </Suspense>
     </Modal>
   );
 };
+
+export default LoginModal;

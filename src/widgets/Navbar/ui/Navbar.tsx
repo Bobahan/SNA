@@ -1,13 +1,14 @@
-import React, { useCallback, useState } from 'react';
+import React, { Suspense, useCallback, useState } from 'react';
 import { classNames } from '@/shared/libs/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Button, ThemeButton } from '@/shared/UIKit/Button/Button';
-import { LoginModal } from '@/feature/AuthByUsername';
 import cls from './Navbar.module.scss';
 import { useSelector } from 'react-redux';
 import { getUser } from '@/entities/User/model/selectors/getUser';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch';
 import { logout } from '@/entities/User/model/slice/userSlice';
+import { Loader } from '@/shared/UIKit/PageLoader/ui/Loader';
+import { LoginModalLazy } from '@/feature/AuthByUsername/ui/LoginModal/LoginModalLazy';
 
 interface NavbarProps {
   className?: string;
@@ -47,7 +48,9 @@ export const Navbar: React.FC<NavbarProps> = () => {
       <h1>MY APP</h1>
       <div className={cls.links}>
         <Button theme={ThemeButton.CLEAR_INVERTED} onClick={handleModalShow}>{t('Войти')}</Button>
-        <LoginModal isOpen={isAuthModal} onClose={handleModalHide}/>
+        <Suspense fallback={<Loader />}>
+          {isAuthModal && <LoginModalLazy isOpen={isAuthModal} onClose={handleModalHide}/>}
+        </Suspense>
       </div>
     </div>
   );

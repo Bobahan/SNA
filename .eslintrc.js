@@ -34,6 +34,8 @@ module.exports = {
     'react/jsx-props-no-spreading': 'warn',
     'no-console': 'off',
     '@typescript-eslint/no-var-requires': 'warn',
-    'react/display-name': 'off'
+    'react/display-name': 'off',
+    '@typescript-eslint/ban-ts-comment': 'off',
+    '@typescript-eslint/no-explicit-any': 'off'
   },
 };

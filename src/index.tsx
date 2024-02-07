@@ -13,13 +13,13 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <BrowserRouter>
     <ErrorBoundary>
-      <React.StrictMode>
+      {/* <React.StrictMode> */}
         <ThemeProvider>
           <StoreProvider>
             <App />
           </StoreProvider>
         </ThemeProvider>
-      </React.StrictMode>
+      {/* </React.StrictMode> */}
     </ErrorBoundary>
   </BrowserRouter>,
 );
